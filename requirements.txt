@@ -1,0 +1,5 @@
+tendo
+pyyaml
+peewee
+pushover
+pymediainfo
