@@ -61,14 +61,14 @@ class FileBot(object):
 
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "Filebot (rename) returned status code: %d" % proc.returncode)
 
         renamedvideo = ""
         checks = 0
 
-        if len(results) is not 0:
+        if len(results) != 0:
             lines = results.split("\n")
             self.log.debug(results.split("\n"))
             for line in lines:
@@ -121,13 +121,13 @@ class FileBot(object):
 
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "Filebot (get_subtitles) returned status code: %d" % proc.returncode)
 
         checks = 0
 
-        if len(results) is not 0:
+        if len(results) != 0:
             lines = results.split("\n")
             for line in lines:
                 self.log.debug(line.strip())

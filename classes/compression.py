@@ -87,7 +87,7 @@ class Compression(object):
             Outputs:
                 None
         """
-        if self.invid is not "":
+        if self.invid != "":
             try:
                 os.remove(self.invid)
             except:

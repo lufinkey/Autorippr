@@ -167,12 +167,12 @@ class MakeMKV(object):
 
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "MakeMKV (rip_disc) returned status code: %d" % proc.returncode)
 
         if errors is not None:
-            if len(errors) is not 0:
+            if len(errors) != 0:
                 self.log.error("MakeMKV encountered the following error: ")
                 self.log.error(errors)
                 return False
@@ -230,12 +230,12 @@ class MakeMKV(object):
 
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "MakeMKV (find_disc) returned status code: %d" % proc.returncode)
 
         if errors is not None:
-            if len(errors) is not 0:
+            if len(errors) != 0:
                 self.log.error("MakeMKV encountered the following error: ")
                 self.log.error(errors)
                 return []
@@ -292,12 +292,12 @@ class MakeMKV(object):
 
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "MakeMKV (get_disc_info) returned status code: %d" % proc.returncode)
 
         if errors is not None:
-            if len(errors) is not 0:
+            if len(errors) != 0:
                 self.log.error("MakeMKV encountered the following error: ")
                 self.log.error(errors)
                 return False

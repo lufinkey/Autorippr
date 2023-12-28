@@ -67,10 +67,10 @@ class ForcedSubs(object):
             data = track.to_data()
             if data['track_type'] == 'Text' and data['language']==self.lang:
                 subs.append(data)
-        if len(subs) is 0:
+        if len(subs) == 0:
             self.log.info("No subtitle found, cannot determine foreign language track.")
             return None
-        if len(subs) is 1:
+        if len(subs) == 1:
             self.log.info("Only one {} subtitle found, cannot determine foreign language track."
                           .format(self.lang))
             return None
@@ -121,13 +121,13 @@ class ForcedSubs(object):
         (results, error) = proc.communicate()
 
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                            "mkvpropedit (forced subtitles) returned status code {}".format(proc.returncode)
                            )
             return False
 
-        if len(results) is not 0:
+        if len(results) != 0:
             lines = results.split('\n')
             for line in lines:
                 self.log.debug(line.strip())

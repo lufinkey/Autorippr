@@ -71,11 +71,11 @@ class HandBrake(object):
         )
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "HandBrakeCLI (compress) returned status code: %d" % proc.returncode)
 
-        if results is not None and len(results) is not 0:
+        if results is not None and len(results) != 0:
             lines = results.split("\n")
             for line in lines:
                 if "Encoding: task" not in line:

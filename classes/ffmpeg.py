@@ -79,7 +79,7 @@ class FFmpeg(object):
         )
         (results, errors) = proc.communicate()
 
-        if proc.returncode is not 0:
+        if proc.returncode != 0:
             self.log.error(
                 "FFmpeg (compress) returned status code: %d" % proc.returncode)
             return False
