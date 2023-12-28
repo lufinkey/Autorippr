@@ -1,0 +1,14 @@
+@ECHO OFF
+setlocal
+
+set CURRENT_SCRIPT_DIR=%~dp0
+IF %CURRENT_SCRIPT_DIR:~-1%==\ (
+	SET CURRENT_SCRIPT_DIR=%CURRENT_SCRIPT_DIR:~0,-1%
+)
+
+set PYTHONPATH=%CURRENT_SCRIPT_DIR%\classes;%PYTHONPATH%
+echo %PYTHONPATH%
+
+python autorippr.py %*
+
+endlocal
