@@ -8,7 +8,7 @@ if %CURRENT_SCRIPT_DIR:~-1%==\ (
 )
 
 :: install requirements
-pip install -r "%CURRENT_SCRIPT_DIR%\requirements.txt" || exit /b !ERRORLEVEL!
+pip install -q -r "%CURRENT_SCRIPT_DIR%\requirements.txt" || exit /b !ERRORLEVEL!
 
 :: create settings.cfg if missing
 if not exist "%CURRENT_SCRIPT_DIR%\settings.cfg" (
