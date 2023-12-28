@@ -162,7 +162,8 @@ class MakeMKV(object):
                 '--minlength=%d' % self.minLength
             ],
             stderr=subprocess.PIPE,
-            stdout=subprocess.PIPE
+            stdout=subprocess.PIPE,
+            text=True
         )
 
         (results, errors) = proc.communicate()
@@ -225,7 +226,8 @@ class MakeMKV(object):
         proc = subprocess.Popen(
             ['%smakemkvcon' % self.makemkvconPath, '-r', 'info', 'disc:-1'],
             stderr=subprocess.PIPE,
-            stdout=subprocess.PIPE
+            stdout=subprocess.PIPE,
+            text=True
         )
 
         (results, errors) = proc.communicate()
