@@ -5,7 +5,7 @@ Autorippr
 Ripping
     Uses MakeMKV to watch for videos inserted into DVD/BD Drives
 
-    Automaticly checks for existing directory/video and will NOT overwrite existing
+    Automatically checks for existing directory/video and will NOT overwrite existing
     files or folders
 
     Checks minimum length of video to ensure video is ripped not previews or other
