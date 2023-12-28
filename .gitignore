@@ -1,5 +1,6 @@
 *.py[co]
 test.py
+__pycache__
 
 # Packages
 *.egg
